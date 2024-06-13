@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form action="{{ url_for('addbook')}}" method="post">
+
+            <label for="title">სახელი:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="author">ავტორი:</label>
+            <input type="text" id="author" name="author" required><br><br>
+
+            <label for="pages">გვერდები:</label>
+            <input type="text" id="pages" name="pages" required><br><br>
+
+            <label for="imageurl">სურათის ლინკი:</label>
+            <input type="text" id="imageurl" name="imageurl" required><br><br>
+
+            <label for="downloadlink">გადმოსაწერი ლინკი:</label>
+            <input type="text" id="downloadlink" name="downloadlink" required><br><br>
+
+            <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Books{% endblock %}
+
+{% block content %}
+    {% for book in books %}
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Book -->
+            <div class="col-md-4 col-xs-6 mb-3">
+                <div class="card">
+                    <img src="{{ book[4] }}" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book[1] }}</h5>
+                        <p class="card-text"><strong>ავტორი:</strong> {{ book[2] }}</p>
+                        <p class="card-text"><strong>გვერდები:</strong> {{ book[3] }}</p>
+                        <a href="{{ book[5] }}" class="btn btn-success">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Buy Me a Coffee Segment -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Support the Author</h5>
+                        <p class="card-text">If you enjoy these books, consider supporting the author with a coffee!</p>
+                        <a href="https://buymeacoffee.com/yourauthor" target="_blank" class="btn btn-primary">Buy Me a Coffee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
